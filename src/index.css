@@ -1,0 +1,59 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color-scheme: light dark;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (prefers-color-scheme: light) {
+  :root{
+    --btn-bot-s:rgba(0, 0, 0, 0.2);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root{
+    --btn-bot-s:rgba(0, 0, 0, 0.8);
+  }
+}
+body{overflow: hidden;}
+#root{
+  width: 100%;
+  height: 100vh;
+  gap: 25px;
+  flex-direction: column;
+}
+#root, div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{ margin: 0; font-size: 42px;}
+span{ opacity: 0.8; }
+div{
+  flex-direction: row;
+  gap: 15px;
+}
+button{
+  border: none;
+  padding: 20px 30px;
+  border-radius: 8px;
+  color: white;
+  transition: 150ms ease-in-out;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+#add{
+  background: #238636;
+  box-shadow: 0 5px 0 0 var(--btn-bot-s);
+}
+#reset{
+  background: #d03533;
+  box-shadow: 0 5px 0 0 var(--btn-bot-s);
+}
+button:hover, button:active{
+  transform: translateY(0px);
+}
+#add:hover, #reset:hover{
+  box-shadow: 0 0px 0 0 var(--btn-bot-s);
+}
+#add:active, #reset:active{
+  box-shadow: inset 0 0px 10px 3px var(--btn-bot-s);
+}
